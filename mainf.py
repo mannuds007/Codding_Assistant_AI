@@ -45,7 +45,8 @@ def document_retrieval(function_name):
 def code_generation(description):
     prompt = "Generate code to:\n" + description
     generated_code = send_message(prompt)
-    st.text_area("Generated Code", value=generated_code, height=300)
+    st.write("Generatede Code")
+    st.markdown(generated_code)
 
 
 st.title("Codding AI Assistant")
