@@ -30,17 +30,20 @@ def send_message(prompt):
 def code_completion(content):
     prompt = "Complete the code:\n" + content
     completion = send_message(prompt)
-    st.text_area("Code Completion", value=completion, height=300)
+    st.write("Code Completion")
+    st.markdown(completion)
 
 def debugging_assistant(content):
     prompt = "Debug the code:\n" + content
     debug = send_message(prompt)
-    st.text_area("Debugging Assistant", value=debug, height=300)
+    st.write("Debugging")
+    st.markdown(debug)
 
 def document_retrieval(function_name):
     prompt = "Retrieve documentation for:\n" + function_name
     retrieval = send_message(prompt)
-    st.text_area("Documentation", value=retrieval, height=300)
+    st.write("Documentation")
+    st.markdown(retrieval)
 
 def code_generation(description):
     prompt = "Generate code to:\n" + description
